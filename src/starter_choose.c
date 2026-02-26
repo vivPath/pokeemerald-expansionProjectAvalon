@@ -106,15 +106,15 @@ static const u8 sPokeballCoords[STARTER_MON_COUNT][2] =
 static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
 {
     {0, 9},
-    {16, 10},
+    {0, 10},
     {8, 4},
 };
 
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
-    SPECIES_TREECKO,
-    SPECIES_TORCHIC,
-    SPECIES_MUDKIP,
+    SPECIES_CHARMANDER,
+    SPECIES_TOTODILE,
+    SPECIES_TURTWIG,
 };
 
 static const struct BgTemplate sBgTemplates[3] =
