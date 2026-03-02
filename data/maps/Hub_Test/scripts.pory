@@ -1,14 +1,24 @@
 mapscripts Hub_Test_MapScripts {
 
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_HUB_STATE, 0: HUB_TEST_KNIGHT_INTRO
+		VAR_HUB_STATE, 1 {
+			lock
+			msgbox("The var has changed.")
+			setvar (VAR_HUB_STATE, 2)
+			release
+		}
+	]
 
-
+	
 }
 
-script testScript {
+script HUB_TEST_KNIGHT_INTRO {
     lock
     faceplayer
+	setvar (VAR_HUB_STATE, 1)
     msgbox(knightText)
-    applymovement (0, testMove)
+    applymovement (LOCALID_PLAYER, testMove)
     waitmovement(0)
     msgbox(knightText1)
     release
@@ -16,7 +26,8 @@ script testScript {
 }
 
 movement testMove {
-    walk_left * 5
+    walk_left * 9
+	face_up
 }
 
 text knightText {
@@ -24,7 +35,12 @@ text knightText {
     Well, don't be shy now, come on over."
 }
 text knightText1 {
-    "Thats good."
+    "Thats good.
+	 Its been awhile since an Interloper
+	 appeared here, you know. Used to be this 
+	 place was a gathering for out kind, a jolly
+	 festival of expedition for all.
+	 Now... well, its as you see."
 }
 
 raw `

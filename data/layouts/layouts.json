@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/Hub_Test/border.bin",
       "blockdata_filepath": "data/layouts/Hub_Test/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE01",
+      "name": "Route01_Layout",
+      "width": 22,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Route01/border.bin",
+      "blockdata_filepath": "data/layouts/Route01/map.bin"
     }
   ]
 }
