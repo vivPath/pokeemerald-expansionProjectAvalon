@@ -100,51 +100,51 @@ Hub_Test_EventScript_TESTBirchsBag::
 # 77 "data/maps/Hub_Test/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 78 "data/maps/Hub_Test/scripts.pory"
-	setflag FLAG_RESCUED_BIRCH
+	// setflag FLAG_RESCUED_BIRCH
 # 79 "data/maps/Hub_Test/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 80 "data/maps/Hub_Test/scripts.pory"
-	removeobject LOCALID_ROUTE101_ZIGZAGOON
+	// removeobject LOCALID_ROUTE101_ZIGZAGOON
 # 81 "data/maps/Hub_Test/scripts.pory"
-	setobjectxy LOCALID_PLAYER, 6, 13
+	// setobjectxy LOCALID_PLAYER, 6, 13
 # 82 "data/maps/Hub_Test/scripts.pory"
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	// applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 # 83 "data/maps/Hub_Test/scripts.pory"
-	waitmovement 0
+	// waitmovement 0
 # 84 "data/maps/Hub_Test/scripts.pory"
 	special ChooseStarter
 # 85 "data/maps/Hub_Test/scripts.pory"
 	waitstate
 # 86 "data/maps/Hub_Test/scripts.pory"
-	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchApproachPlayer
+	// applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchApproachPlayer
 # 87 "data/maps/Hub_Test/scripts.pory"
-	waitmovement 0
+	// waitmovement 0
 # 88 "data/maps/Hub_Test/scripts.pory"
-	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
+	// msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
 # 89 "data/maps/Hub_Test/scripts.pory"
-	special HealPlayerParty
+	// special HealPlayerParty
 # 90 "data/maps/Hub_Test/scripts.pory"
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+	// setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
 # 91 "data/maps/Hub_Test/scripts.pory"
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
+	// clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
 # 92 "data/maps/Hub_Test/scripts.pory"
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	// setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
 # 93 "data/maps/Hub_Test/scripts.pory"
-	setvar VAR_BIRCH_LAB_STATE, 2
+	// setvar VAR_BIRCH_LAB_STATE, 2
 # 94 "data/maps/Hub_Test/scripts.pory"
-	setvar VAR_ROUTE101_STATE, 3
+	// setvar VAR_ROUTE101_STATE, 3
 # 95 "data/maps/Hub_Test/scripts.pory"
-	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	// clearflag FLAG_HIDE_MAP_NAME_POPUP
 # 96 "data/maps/Hub_Test/scripts.pory"
-	checkplayergender
+	// checkplayergender
 # 97 "data/maps/Hub_Test/scripts.pory"
-	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
+	// call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
 # 98 "data/maps/Hub_Test/scripts.pory"
-	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
+	// call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
 # 99 "data/maps/Hub_Test/scripts.pory"
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
+	// warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
 # 100 "data/maps/Hub_Test/scripts.pory"
-	waitstate
+	// waitstate
 # 101 "data/maps/Hub_Test/scripts.pory"
 	release
 # 102 "data/maps/Hub_Test/scripts.pory"
