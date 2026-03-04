@@ -3,10 +3,10 @@ mapscripts Hub_Test_MapScripts {
 	MAP_SCRIPT_ON_FRAME_TABLE [
 		VAR_HUB_STATE, 0: HUB_TEST_KNIGHT_INTRO
 		VAR_HUB_STATE, 1 {
-			lock
-			msgbox("The var has changed.")
-			setvar (VAR_HUB_STATE, 2)
-			release
+			// lock
+			// msgbox("The var has changed.")
+			// setvar (VAR_HUB_STATE, 2)
+			// release
 		}
 	]
 
@@ -17,12 +17,27 @@ script HUB_TEST_KNIGHT_INTRO {
     lock
     faceplayer
 	setvar (VAR_HUB_STATE, 1)
+	setvar (VAR_KNIGHT_TEXT_STATE, 0)
     msgbox(knightText)
     applymovement (LOCALID_PLAYER, testMove)
     waitmovement(0)
     msgbox(knightText1)
     release
     end
+}
+
+script HUB_TEST_KNIGHT_EXPOSITION {
+	lock 
+	faceplayer
+	if (var(VAR_KNIGHT_TEXT_STATE) == 0){
+		msgbox(expositionText)
+		setvar(VAR_KNIGHT_TEXT_STATE, 1)
+	}
+	elif(var(VAR_KNIGHT_TEXT_STATE) == 1){
+		msgbox(expositionText2)
+	}
+	release
+	end
 }
 
 movement testMove {
@@ -42,7 +57,19 @@ text knightText1 {
 	 festival of expedition for all.
 	 Now... well, its as you see."
 }
-
+text expositionText {
+	"Melancholy Knight: You must be quite
+	 confused.
+	 See, you and I are of a kind,
+	 Interlopers in this world.
+	 Something has called us and others 
+	 like us to this place.
+	 Avalon."
+}
+text expositionText2 {
+	"Testing for more text
+	 after VAR changes."
+}
 raw `
 Hub_Test_EventScript_TESTBirchsBag::
 	lock
